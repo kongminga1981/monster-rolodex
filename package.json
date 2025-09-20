@@ -2,6 +2,7 @@
   "name": "app1",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://kongminga1981.github.io/monsters-rolodex",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -13,17 +14,16 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "resolutions": {
+    "eslint-plugin-react": "latest"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "predeploy" : "yarn build",
+    "deploy" : "gh-pages -d build"
   },
   "browserslist": {
     "production": [
